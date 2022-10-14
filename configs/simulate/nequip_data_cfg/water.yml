@@ -1,0 +1,24 @@
+root: MODELPATH/nequip
+dataset: npz                                                                       # type of data set, can be npz or ase
+dataset_file_name: DATAPATH/water/90k/test/nequip_npz.npz 
+n_train: 10000
+
+key_mapping:
+  atom_types: atomic_numbers                                                          # atomic species, integers
+  energy: total_energy                                                                  # total potential eneriges to train to
+  forces: forces                                                                        # atomic forces to train to
+  wrapped_coords: pos
+  lattices: cell
+  pbc: pbc                                                                         # raw atomic positions
+npz_fixed_field_keys:                                                              # fields that are repeated across different examples
+  - atomic_numbers
+  - pbc
+
+chemical_symbols:
+  - H
+  - O
+
+global_rescale_scale_trainable: false
+per_species_rescale_trainable: true
+per_species_rescale_shifts: dataset_per_atom_total_energy_mean
+per_species_rescale_scales: dataset_forces_rms

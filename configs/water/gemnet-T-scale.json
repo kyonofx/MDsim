@@ -1,0 +1,20 @@
+{
+    "comment": null,
+    "TripInteraction_1_had_rbf": 5.5737762451171875,
+    "TripInteraction_1_sum_cbf": 1.7056342363357544,
+    "AtomUpdate_1_sum": 0.4618416130542755,
+    "TripInteraction_2_had_rbf": 4.484927177429199,
+    "TripInteraction_2_sum_cbf": 1.6062310934066772,
+    "AtomUpdate_2_sum": 0.4112415015697479,
+    "TripInteraction_3_had_rbf": 4.911035060882568,
+    "TripInteraction_3_sum_cbf": 1.6301891803741455,
+    "AtomUpdate_3_sum": 0.3454769253730774,
+    "TripInteraction_4_had_rbf": 5.337745666503906,
+    "TripInteraction_4_sum_cbf": 1.6658426523208618,
+    "AtomUpdate_4_sum": 0.32520246505737305,
+    "OutBlock_0_sum": 0.4573551118373871,
+    "OutBlock_1_sum": 0.514782190322876,
+    "OutBlock_2_sum": 0.4109618067741394,
+    "OutBlock_3_sum": 0.37208542227745056,
+    "OutBlock_4_sum": 0.3400648534297943
+}

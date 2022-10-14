@@ -1,0 +1,29 @@
+includes:
+- configs/md17/base.yml
+
+model:
+  name: schnet
+  hidden_channels: 64
+  num_filters: 64
+  num_interactions: 6
+  num_gaussians: 25
+  cutoff: 5.0
+  use_pbc: False
+  otf_graph: True
+
+optim:
+  batch_size: 100
+  eval_batch_size: 100
+  num_workers: 8
+  lr_initial: 0.001
+  lr_gamma: 0.1
+  optimizer: Adam
+  warmup_steps: 5000
+  warmup_factor: 0.2
+  max_epochs: 10000
+  energy_coefficient: 0.05
+  force_coefficient: 0.95
+  scheduler: ReduceLROnPlateau
+  patience: 5
+  factor: 0.8
+  min_lr: 0.000001

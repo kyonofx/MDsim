@@ -1,0 +1,15 @@
+model_dir: MODELPATH
+dataset_src: DATAPATH/lips/20k/test
+dp_data_path: DATAPATH/lips/20k/DP/test
+nequip_data_config: configs/simulate/nequip_data_cfg/lips.yml
+sim_type: ocp
+seed: 123
+identifier: 50ps
+save_freq: 50
+steps: 200000
+max_test_points: 5000
+
+kcal: False
+T_init: 520.
+integrator: NoseHoover
+integrator_config: {"timestep": 0.25, "temperature": 520., "ttime": 20.}

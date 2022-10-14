@@ -1,0 +1,70 @@
+amp: false
+checkpoint: null
+cpu: false
+dataset:
+- grad_target_mean: -3.5600233069761502e-09
+  grad_target_std: 1.25220260734245
+  name: water
+  normalize_labels: true
+  size: 1k
+  src: DATAPATH/water/1k/train
+  target_mean: -26.147620446227215
+  target_std: 0.6255959083458403
+- src: DATAPATH/water/1k/val
+distributed: false
+distributed_backend: nccl
+distributed_port: 13356
+identifier: ''
+is_debug: false
+local_rank: 0
+logger:
+  name: wandb
+  project: mdbench
+mode: train
+model:
+  cutoff: 6.0
+  hidden_channels: 64
+  name: schnet
+  num_filters: 64
+  num_gaussians: 25
+  num_interactions: 6
+  otf_graph: true
+  use_pbc: true
+noddp: false
+optim:
+  batch_size: 1
+  clip_grad_norm: 10
+  early_stopping_lr: 1.0e-06
+  early_stopping_time: 604800
+  ema_decay: 0.999
+  energy_coefficient: 1
+  eval_batch_size: 1
+  factor: 0.8
+  force_coefficient: 100
+  lr_initial: 0.001
+  max_epochs: 10000
+  min_lr: 1.0e-06
+  num_workers: 4
+  optimizer: Adam
+  optimizer_params:
+    amsgrad: true
+  patience: 50
+  scheduler: ReduceLROnPlateau
+print_every: 200
+run_dir: example_model/water_1k_schnet
+seed: 0
+submit: false
+summit: false
+task:
+  dataset: lmdb
+  description: Regressing to energies and forces
+  eval_on_free_atoms: true
+  grad_input: atomic forces
+  labels:
+  - potential energy
+  metric: mae
+  train_on_free_atoms: true
+  type: regression
+timestamp_id: null
+trainer: trainer
+world_size: 1

@@ -1,0 +1,18 @@
+model_dir: MODELPATH
+test_dataset_src: DATAPATH/ala/40k/test
+dataset_src: DATAPATH/ala/local_minimas
+nequip_data_config: configs/simulate/nequip_data_cfg/ala.yml
+dp_data_path: DATAPATH/ala_dp/40k/test
+sim_type: ocp
+seed: 0
+init_idx: 0
+identifier: 5ns
+save_freq: 500
+steps: 2500000
+max_test_points: 10000
+plumed: True
+
+kcal: False # legacy. want to remove soon.
+T_init: 300.
+integrator: Langevin
+integrator_config: {"timestep": 2., "temperature_K": 300., "friction": 0.5}

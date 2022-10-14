@@ -1,0 +1,32 @@
+includes:
+- configs/md17/base.yml
+
+identifier: size512
+
+model:
+  name: forcenet
+  num_interactions: 5
+  cutoff: 6
+  basis: "sphallmul"
+  ablation: "none"
+  depth_mlp_edge: 2
+  depth_mlp_node: 1
+  activation_str: "swish"
+  decoder_activation_str: "swish"
+  feat: "full"
+  hidden_channels: 512
+  decoder_hidden_channels: 512
+  max_n: 3
+  otf_graph: True
+
+optim:
+  batch_size: 8
+  eval_batch_size: 8
+  num_workers: 8
+  lr_initial: 0.001
+  max_epochs: 10000
+  energy_coefficient: 0
+  scheduler: ReduceLROnPlateau
+  patience: 5
+  factor: 0.8
+  min_lr: 0.000001

@@ -1,0 +1,18 @@
+includes:
+- configs/ala/base.yml
+
+model:
+  name: forcenet
+  num_interactions: 5
+  cutoff: 6
+  basis: "sphallmul"
+  ablation: "none"
+  depth_mlp_edge: 2
+  depth_mlp_node: 1
+  activation_str: "swish"
+  decoder_activation_str: "swish"
+  feat: "full"
+  hidden_channels: 512
+  decoder_hidden_channels: 512
+  max_n: 3
+  otf_graph: True

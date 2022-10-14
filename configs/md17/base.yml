@@ -1,0 +1,27 @@
+trainer: trainer
+
+dataset:
+  src: DATAPATH/md17
+  name: md17
+  size: 10k
+  molecule: aspirin
+  normalize_labels: False
+
+logger: 
+  name: wandb
+  project: mdbench
+
+task:
+  dataset: lmdb
+  description: "Regressing to energies and forces"
+  type: regression
+  metric: mae
+  labels:
+    - potential energy
+  grad_input: atomic forces
+  train_on_free_atoms: True
+  eval_on_free_atoms: True
+
+optim:
+  early_stopping_time: 604800
+  early_stopping_lr: 0.000001

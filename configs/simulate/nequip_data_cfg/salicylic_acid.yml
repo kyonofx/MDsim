@@ -1,0 +1,23 @@
+root: MODELPATH/nequip
+dataset: npz                                                                       
+dataset_file_name: DATAPATH/md17/salicylic_acid/10k/test/nequip_npz.npz
+n_train: 10000
+
+key_mapping:
+  z: atomic_numbers                                                                
+  E: total_energy                                                                  
+  F: forces                                                                        
+  R: pos             
+                                                             
+npz_fixed_field_keys:                                                              
+  - atomic_numbers
+
+chemical_symbols:
+  - H
+  - C
+  - O
+
+per_species_rescale_shifts_trainable: false
+per_species_rescale_scales_trainable: false
+per_species_rescale_shifts: dataset_per_atom_total_energy_mean
+per_species_rescale_scales: dataset_forces_rms

@@ -1,0 +1,57 @@
+includes:
+- configs/md17/base.yml
+
+identifier: dT
+
+model:
+  name: gemnet_t
+  num_spherical: 7
+  num_radial: 6
+  num_blocks: 4
+  emb_size_atom: 128
+  emb_size_edge: 128
+  emb_size_trip: 64
+  emb_size_rbf: 16
+  emb_size_cbf: 16
+  emb_size_bil_trip: 64
+  num_before_skip: 1
+  num_after_skip: 1
+  num_concat: 1
+  num_atom: 2
+  cutoff: 5.0
+  max_neighbors: 50
+  rbf:
+    name: gaussian
+  envelope:
+    name: polynomial
+    exponent: 5
+  cbf:
+    name: spherical_harmonics
+  output_init: HeOrthogonal
+  activation: silu
+  scale_file: configs/md17/gemnet-dT-scale.json
+  extensive: True
+  otf_graph: True
+  regress_forces: True
+  direct_forces: True
+
+optim:
+  batch_size: 1
+  eval_batch_size: 1
+  num_workers: 4
+  lr_initial: 0.001
+  optimizer: AdamW
+  optimizer_params: {"eps": 1.e-7, "weight_decay": 0.000002, "amsgrad": True}
+
+  scheduler: ReduceLROnPlateau
+  patience: 5
+  factor: 0.8
+  min_lr: 0.000001  
+
+  max_epochs: 10000
+  force_coefficient: 1000
+  energy_coefficient: 1
+  ema_decay: 0.999
+  clip_grad_norm: 10
+  loss_energy: mae
+  loss_force: l2mae

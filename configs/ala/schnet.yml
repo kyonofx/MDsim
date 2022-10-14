@@ -1,0 +1,12 @@
+includes:
+- configs/ala/base.yml
+
+model:
+  name: schnet
+  hidden_channels: 64
+  num_filters: 64
+  num_interactions: 6
+  num_gaussians: 25
+  cutoff: 6.0
+  use_pbc: True
+  otf_graph: True

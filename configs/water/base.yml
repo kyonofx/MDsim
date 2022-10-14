@@ -1,0 +1,44 @@
+trainer: trainer
+
+dataset:
+  src: DATAPATH/water
+  name: water
+  size: 10k
+  normalize_labels: True
+
+logger: 
+  name: wandb
+  project: mdbench
+
+task:
+  dataset: lmdb
+  description: "Regressing to energies and forces"
+  type: regression
+  metric: mae
+  labels:
+    - potential energy
+  grad_input: atomic forces
+  train_on_free_atoms: True
+  eval_on_free_atoms: True
+
+optim:
+  batch_size: 1
+  eval_batch_size: 1
+  num_workers: 4
+  lr_initial: 0.001
+  optimizer: Adam
+  optimizer_params: {"amsgrad": True}
+
+  scheduler: ReduceLROnPlateau
+  patience: 5
+  factor: 0.8
+  min_lr: 0.000001
+
+  max_epochs: 2000
+  force_coefficient: 100
+  energy_coefficient: 1
+  ema_decay: 0.999
+  clip_grad_norm: 10
+
+  early_stopping_time: 604800
+  early_stopping_lr: 0.000001

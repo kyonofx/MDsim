@@ -1,0 +1,81 @@
+{
+	"_comment": " model parameters",
+	"model": {
+		"type_map": [
+			"H",
+			"C",
+			"O"
+		],
+		"descriptor": {
+			"type": "se_e2_a",
+			"sel": [
+				40,
+				40,
+				40
+			],
+			"rcut_smth": 1.00,
+			"rcut": 6.00,
+			"neuron": [
+				25,
+				50,
+				100
+			],
+			"resnet_dt": false,
+			"axis_neuron": 12,
+			"seed": 1,
+			"_comment": " that's all"
+		},
+		"fitting_net": {
+			"neuron": [
+				240,
+				120,
+				60,
+				30,
+				10
+			],
+			"resnet_dt": true,
+			"seed": 1,
+			"_comment": " that's all"
+		},
+		"_comment": " that's all"
+	},
+	"learning_rate": {
+		"type": "exp",
+		"decay_steps": 20000,
+		"start_lr": 0.001,
+		"stop_lr": 3.51e-8,
+		"_comment": "that's all"
+	},
+	"loss": {
+		"type": "ener",
+		"start_pref_e": 1,
+		"limit_pref_e": 400,
+		"start_pref_f": 1000,
+		"limit_pref_f": 1,
+		"start_pref_v": 0,
+		"limit_pref_v": 0,
+		"_comment": " that's all"
+	},
+	"training": {
+		"training_data": {
+			"systems": "../../DATAPATH/md17/ethanol/10k/DP/train",
+			"batch_size": 4,
+			"_comment": "that's all"
+		},
+		"validation_data": {
+			"systems": [
+				"../../DATAPATH/md17/ethanol/10k/DP/val"
+			],
+			"batch_size": 4,
+			"numb_btch": 12,
+			"_comment": "that's all"
+		},
+		"numb_steps": 4000000,
+		"seed": 10,
+		"disp_file": "lcurve.out",
+		"disp_freq": 2000,
+		"save_freq": 1000000,
+		"_comment": "that's all"
+	},
+	"_comment": "that's all"
+}
