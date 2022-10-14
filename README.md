@@ -1,9 +1,11 @@
 # Benchmarking ML for MD simulation
 
-`mdsim` is a codebase for training and running molecular dynamics simulation with machine learning force fields. This implementation was tested under Ubuntu 18.04, Python 3.9, PyTorch 1.11, and CUDA 11.3. Detailed versions of other packages are listed in the [installiation guide](#install-other-dependencies).
+`mdsim` is a codebase for training and running molecular dynamics simulation with machine learning force fields. This implementation was tested under Ubuntu 18.04, Python 3.9, PyTorch 1.11, and CUDA 11.3. Detailed versions of other packages are listed in the [installiation guide](#install-other-dependencies). If you have any question, feel free to open an issue or reach out to `xiangfu@mit.edu`.
 
 [[paper]](https://arxiv.org/abs/2210.07237)
 [[dataset]](https://zenodo.org/record/7196767)
+
+![Alt Text](assets/systems.png)
 
 if you find this code useful, please consider reference in your paper:
 
@@ -189,3 +191,5 @@ A guide on computing the reported observables for each system will be available 
 ## Acknowledgements
 
 This codebase is built off the [Open Catalyst Project](https://github.com/Open-Catalyst-Project/ocp) codebase. A significant amount of code is borrowed from [mdgrad](https://github.com/torchmd/mdgrad) and [NeuralForceField](https://github.com/learningmatter-mit/NeuralForceField). The MD simulation capabilities are built with [ASE](https://gitlab.com/ase/ase/-/tree/master/). The ML models are built with [PyG](https://github.com/pyg-team/pytorch_geometric). Simulation/training of [NequIP](https://github.com/mir-group/nequip) and [DeepMD-kit](https://github.com/deepmodeling/deepmd-kit) are built upon the original codebases.
+
+![Alt Text](assets/ala2.gif)
