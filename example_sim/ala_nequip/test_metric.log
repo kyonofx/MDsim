@@ -1,0 +1,14 @@
+Using device: cuda
+WARNING: please note that models running on CUDA are usually nondeterministc and that this manifests in the final test errors; for a _more_ deterministic result, please use `--device cpu`
+Loading model... 
+loaded model from training session
+Loading dataset...
+Loaded dataset specified in ala.yml.
+Using all frames from the specified test dataset, yielding a test set size of 2000 frames.
+Starting...
+
+--- Final result: ---
+               f_mae =  0.215261           
+              f_rmse =  0.344438           
+               e_mae =  13.130361          
+             e/N_mae =  0.596834           

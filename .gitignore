@@ -1,7 +1,6 @@
 wandb
 results
 logs
-*.traj
 experimental
 
 # Byte-compiled / optimized / DLL files
@@ -56,7 +55,6 @@ coverage.xml
 *.pot
 
 # Django stuff:
-*.log
 local_settings.py
 
 # Flask stuff:
