@@ -184,7 +184,7 @@ python simulate.py --config_yml configs/simulate/water.yml --model_dir MODELPATH
 
 Use the argument `--init_idx` to select a specific initial configuration. This is useful for simulating alanine dipeptide.
 
-## Compute observables and evaluation (WIP🚧)
+## Compute observables and evaluation
 
 Some example simulations from trained models are in `example_sim/`. [observable.ipynb](./observable.ipynb) offers a guide on computing the observables reported in the paper.
 
