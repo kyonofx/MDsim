@@ -166,7 +166,7 @@ def simulate(config, calculator, test_metrics):
         else:
             plumed_meta_cmd = f"metad: METAD ARG=phi,psi PACE=500 HEIGHT=1.2 SIGMA=0.35,0.35 FILE={str(save_dir)}/HILLS BIASFACTOR=6.0"
         setup = [f"UNITS LENGTH=A TIME={1/(1000 * units.fs)} ENERGY={units.mol/units.kJ}",
-         "MOLINFO STRUCTURE=./ala2.pdb",
+         "MOLINFO STRUCTURE=./alanine_dipeptide_files/ala2.pdb",
          "phi: TORSION ATOMS=@phi-2 ",
          "psi: TORSION ATOMS=@psi-2 ",
          plumed_meta_cmd,

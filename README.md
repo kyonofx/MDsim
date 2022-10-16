@@ -184,7 +184,20 @@ Use the argument `--init_idx` to select a specific initial configuration. This i
 
 ## Compute observables and evaluation (WIP🚧)
 
-A guide on computing the reported observables for each system will be available soon.
+Some example simulations from trained models are in `example_sim/`. [observable.ipynb](./observable.ipynb) offers a guide on computing the observables reported in the paper.
+
+Install the IPython kernel to use Jupyter notebook:
+
+```
+conda install ipykernel
+python -m ipykernel install --user --name mdsim --display-name "mdsim"
+```
+
+`nglview` can be used to visualize MD simulations. We recommend installing it with conda:
+
+```
+pip install --user nglview
+```
 
 ## Acknowledgements
 

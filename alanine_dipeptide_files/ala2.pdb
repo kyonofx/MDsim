@@ -1,0 +1,26 @@
+TITLE     Gromacs Runs One Microsecond At Cannonball Speeds
+MODEL        1
+ATOM      1 1HH3 ACE A   1       0.844   0.586   3.765  1.00  0.00           H
+ATOM      2  CH3 ACE A   1      -0.219   0.365   3.675  1.00  0.00           C
+ATOM      3 2HH3 ACE A   1      -0.540  -0.233   4.528  1.00  0.00           H
+ATOM      4 3HH3 ACE A   1      -0.785   1.295   3.650  1.00  0.00           H
+ATOM      5  C   ACE A   1      -0.468  -0.410   2.396  1.00  0.00           C
+ATOM      6  O   ACE A   1      -0.957  -1.533   2.440  1.00  0.00           O
+ATOM      7  N   ALA A   2      -0.119   0.186   1.255  1.00  0.00           N
+ATOM      8  H   ALA A   2       0.311   1.099   1.292  1.00  0.00           H
+ATOM      9 CA   ALA A   2      -0.298  -0.382  -0.082  1.00  0.00          CA
+ATOM     10  HA  ALA A   2      -0.029  -1.440  -0.049  1.00  0.00           H
+ATOM     11  CB  ALA A   2      -1.777  -0.261  -0.486  1.00  0.00           C
+ATOM     12  HB1 ALA A   2      -2.404  -0.790   0.234  1.00  0.00           H
+ATOM     13  HB2 ALA A   2      -2.070   0.790  -0.509  1.00  0.00           H
+ATOM     14  HB3 ALA A   2      -1.935  -0.697  -1.472  1.00  0.00           H
+ATOM     15  C   ALA A   2       0.628   0.315  -1.095  1.00  0.00           C
+ATOM     16  O   ALA A   2       1.124   1.410  -0.831  1.00  0.00           O
+ATOM     17  N   NME A   3       0.851  -0.319  -2.250  1.00  0.00           N
+ATOM     18  H   NME A   3       0.402  -1.208  -2.397  1.00  0.00           H
+ATOM     19  CH3 NME A   3       1.698   0.205  -3.315  1.00  0.00           C
+ATOM     20 1HH3 NME A   3       1.307   1.165  -3.657  1.00  0.00           H
+ATOM     21 2HH3 NME A   3       1.721  -0.493  -4.152  1.00  0.00           H
+ATOM     22 3HH3 NME A   3       2.713   0.351  -2.940  1.00  0.00           H
+TER
+ENDMDL
