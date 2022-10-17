@@ -7,30 +7,6 @@ model:
   num_filters: 64
   num_interactions: 6
   num_gaussians: 25
-  cutoff: 5.0
+  cutoff: 6.0
   use_pbc: True
   otf_graph: True
-
-# *** Important note ***
-#   The total number of gpus used for this run was 8.
-#   If the global batch size (num_gpus * batch_size) is modified
-#   the lr_milestones and warmup_steps need to be adjusted accordingly.
-
-optim:
-  batch_size: 4
-  eval_batch_size: 4
-  num_workers: 4
-  lr_initial: 0.001
-  lr_gamma: 0.1
-  optimizer: Adam
-  ema_decay: 0.999
-  # clip_grad_norm: 5.
-  warmup_steps: 5000
-  warmup_factor: 0.2
-  max_epochs: 20000
-  energy_coefficient: 1.
-  force_coefficient: 100000
-  scheduler: ReduceLROnPlateau
-  patience: 50
-  factor: 0.1
-  min_lr: 0.000001
