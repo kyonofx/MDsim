@@ -1,6 +1,6 @@
 # Benchmarking ML for MD simulation
 
-`mdsim` is a codebase for training and running molecular dynamics simulation with machine learning force fields. This implementation was tested under Ubuntu 18.04, Python 3.9, PyTorch 1.11, and CUDA 11.3. Detailed versions of other packages are listed in the [installiation guide](#install-other-dependencies). If you have any question, feel free to open an issue or reach out to `xiangfu@mit.edu`.
+`mdsim` is a codebase for training and running molecular dynamics simulation with machine learning force fields. This implementation was tested under Ubuntu 18.04, Python 3.9, PyTorch 1.11, and CUDA 11.3. Detailed versions of other packages are listed in the [installiation guide](#install-other-dependencies). If you have any question, feel free to open an issue or reach out to `xiangfu AT mit.edu`.
 
 [[paper]](https://arxiv.org/abs/2210.07237)
 [[dataset]](https://zenodo.org/record/7196767)
