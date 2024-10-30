@@ -21,7 +21,9 @@ from mdsim.datasets import data_list_collater
 def atoms_to_batch(atoms):
     atomic_numbers = torch.Tensor(atoms.get_atomic_numbers())
     positions = torch.Tensor(atoms.get_positions())
-    cell = torch.Tensor(atoms.get_cell()).view(1, 3, 3)
+    cell = torch.Tensor(atoms.get_cell())
+    positions = (positions @ torch.linalg.inv(cell) % 1) @ cell
+    cell = cell.view(1, 3, 3)
     natoms = positions.shape[0]
 
     return Data(
