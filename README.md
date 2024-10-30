@@ -1,5 +1,7 @@
 # Benchmarking ML for MD simulation [TMLR 2023]
 
+Update (Oct 29, 2024): In response to a bug fix (https://github.com/FAIR-Chem/fairchem/pull/783) in one of the code bases this work was built upon, we have updated the code and our paper at TMLR: https://openreview.net/forum?id=A8pqQipwkt.
+
 `mdsim` is a codebase for training and running molecular dynamics simulation with machine learning force fields. This implementation was tested under Ubuntu 18.04, Python 3.9, PyTorch 1.11, and CUDA 11.3. Detailed versions of other packages are listed in the [installiation guide](#install-other-dependencies). If you have any question, feel free to open an issue or reach out to `xiangfu AT mit.edu`.
 
 [[paper]](https://openreview.net/forum?id=A8pqQipwkt)
